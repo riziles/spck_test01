@@ -12,6 +12,18 @@ class Paragraph extends React.Component {
   }
 }
 
+class Square extends React.Component {
+  render() {
+    return (
+      <button className="square">
+        {/* TODO */}
+      </button>
+    );
+  }
+}
+
+
+
 class Main extends React.Component {
   constructor (props) {
     super(props);
@@ -21,6 +33,7 @@ class Main extends React.Component {
   render() {
     return  (
       <div className="">
+          <Square />
           <Paragraph text={this.props.text} />
       </div>
     )
