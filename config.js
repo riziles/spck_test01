@@ -4,7 +4,7 @@ SystemJS.config({
   packages: {
     ".": {
       main: './app.js',
-      defaultExtension: 'js'
+      defaultExtension: ''
     }
   },
   meta: {
@@ -12,14 +12,15 @@ SystemJS.config({
       'babelOptions': {
         react: true
       }
-    }
+    },
+    '*.css':  { loader: 'css' }
   },
   map: {
+    css: 'systemjs-plugin-css/css.js',
     'plugin-babel': 'systemjs-plugin-babel@latest/plugin-babel.js',
     'systemjs-babel-build': 'systemjs-plugin-babel@latest/systemjs-babel-browser.js',
     'react': 'react@17.0.1/umd/react.development.js',
-    'react-dom': 'react-dom@17.0.1/umd/react-dom.development.js',
-    '*.css': {loader: 'css'}
+    'react-dom': 'react-dom@17.0.1/umd/react-dom.development.js'
   },
   transpiler: 'plugin-babel'
 });
